@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>测试公司 专业级财务分析报告</title>
+  <style>
+    :root {
+      --navy:#062B5F; --primary:#1769F5; --cyan:#13B7B9; --orange:#FF9F2E; --purple:#5B5CE2;
+      --green:#18A058; --red:#E5484D; --yellow:#F7B731; --ink:#14213D; --muted:#667085;
+      --bg:#EEF5FF; --card:#FFFFFF; --line:#DDE8F7;
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Arial,"Microsoft YaHei","Source Han Sans SC",sans-serif; color:var(--ink); background:var(--bg); }
+    main { width:min(1320px,calc(100vw - 56px)); margin:0 auto; padding:30px 0 44px; }
+    header { display:flex; justify-content:space-between; gap:18px; align-items:flex-start; margin-bottom:18px; }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { margin-bottom:8px; font-size:30px; font-weight:900; }
+    h2 { font-size:21px; margin-bottom:14px; color:var(--navy); font-weight:900; }
+    h3 { margin:18px 0 10px; color:var(--navy); }
+    header p,.basis { color:var(--muted); line-height:1.8; }
+    .tag { border:1px solid var(--line); border-radius:999px; padding:10px 16px; background:#fff; color:var(--muted); font-weight:800; white-space:nowrap; }
+    .kpis { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:14px; margin-bottom:16px; }
+    .card,.panel,.summary-card { background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:0 8px 20px rgba(21,91,180,.06); }
+    .card { padding:16px; min-height:172px; transition:.18s ease; }
+    .card:hover,.panel:hover { transform:translateY(-1px); box-shadow:0 12px 28px rgba(21,91,180,.10); }
+    .label { color:var(--muted); font-weight:900; font-size:13px; }
+    .value { font-size:22px; font-weight:900; margin:7px 0; }
+    .sub { font-size:12px; font-weight:800; color:var(--muted); line-height:1.6; }
+    .risk-pill { display:inline-flex; margin-top:8px; border-radius:999px; padding:4px 9px; color:#fff; font-size:12px; font-weight:900; }
+    .risk-green { background:var(--green); } .risk-yellow { background:var(--yellow); color:#4A3A00; } .risk-red { background:var(--red); }
+    details { margin-top:8px; color:#344054; font-size:12px; line-height:1.55; }
+    summary { cursor:pointer; font-weight:800; color:var(--primary); }
+    .panel { padding:22px; margin-bottom:16px; overflow:hidden; }
+    .summary-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin-bottom:16px; }
+    .summary-card { padding:18px; line-height:1.7; }
+    .summary-card strong { color:var(--navy); }
+    .chart-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+    .chart-panel svg { width:100%; height:auto; display:block; }
+    .chart-title { font-size:18px; font-weight:900; fill:var(--navy); }
+    .chart-note { font-size:12px; fill:var(--muted); }
+    .legend { display:flex; flex-wrap:wrap; gap:14px; margin-top:8px; color:var(--muted); font-size:13px; font-weight:800; }
+    .dot { display:inline-block; width:10px; height:10px; border-radius:999px; margin-right:6px; }
+    table { width:100%; border-collapse:collapse; table-layout:fixed; }
+    th,td { padding:12px 14px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; line-height:1.6; font-size:14px; }
+    th { background:#F3F8FF; color:var(--navy); font-weight:900; }
+    td:first-child { font-weight:900; }
+    .warning { color:var(--red); font-weight:800; }
+    @media (max-width:1180px) {
+      main { width:min(100vw - 28px,760px); }
+      header { flex-direction:column; }
+      .kpis,.summary-grid,.chart-grid { grid-template-columns:1fr; }
+      table { table-layout:auto; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <h1>测试公司 2025 专业级财务分析报告</h1>
+      <p>所属行业：制造业 · 展示口径：同比 + 较上期 · 基准口径：制造业参考阈值</p>
+    </div>
+    <div class="tag">HTML 看板 · 离线可查看</div>
+  </header>
+  <section class="kpis"><article class="card" title="营业收入：1.40亿元">
+  <div class="label">营业收入</div>
+  <div class="value">1.40亿元</div>
+  <div class="sub">同比 18.22%<br>较上期 2,150.00万元</div>
+  <span class="risk-pill risk-green">绿色稳健</span>
+  <details><summary>展开参考阈值对比</summary>制造业参考阈值用于风险提示，不代表外部实时均值。规模变化反映市场需求和交付节奏，需结合订单、价格和产能利用率复核。</details>
+</article><article class="card" title="净利润：1,880.00万元">
+  <div class="label">净利润</div>
+  <div class="value">1,880.00万元</div>
+  <div class="sub">同比 29.66%<br>较上期 430.00万元</div>
+  <span class="risk-pill risk-green">绿色稳健</span>
+  <details><summary>展开参考阈值对比</summary>制造业参考阈值用于风险提示，不代表外部实时均值。利润端反映成本费用控制和产品结构变化，需关注非经常性项目影响。</details>
+</article><article class="card" title="毛利率：36.56%">
+  <div class="label">毛利率</div>
+  <div class="value">36.56%</div>
+  <div class="sub">同比 2.71%<br>较上期 -</div>
+  <span class="risk-pill risk-green">绿色稳健</span>
+  <details><summary>展开参考阈值对比</summary>制造业参考阈值用于风险提示，不代表外部实时均值。毛利率用于观察主业盈利质量，制造业场景需同步关注成本传导能力。</details>
+</article><article class="card" title="经营现金流：2,240.00万元">
+  <div class="label">经营现金流</div>
+  <div class="value">2,240.00万元</div>
+  <div class="sub">同比 30.23%<br>较上期 520.00万元</div>
+  <span class="risk-pill risk-green">绿色稳健</span>
+  <details><summary>展开参考阈值对比</summary>制造业参考阈值用于风险提示，不代表外部实时均值。经营现金流衡量利润含金量，若弱于净利润需关注回款和存货占用。</details>
+</article><article class="card" title="ROE：20.60%">
+  <div class="label">ROE</div>
+  <div class="value">20.60%</div>
+  <div class="sub">同比 5.86%<br>较上期 -</div>
+  <span class="risk-pill risk-green">绿色稳健</span>
+  <details><summary>展开参考阈值对比</summary>制造业参考阈值用于风险提示，不代表外部实时均值。ROE需结合净利率、周转率和权益乘数拆解，避免单纯依赖杠杆提升。</details>
+</article><article class="card" title="资产负债率：40.18%">
+  <div class="label">资产负债率</div>
+  <div class="value">40.18%</div>
+  <div class="sub">同比 -8.34%<br>较上期 -</div>
+  <span class="risk-pill risk-green">绿色稳健</span>
+  <details><summary>展开参考阈值对比</summary>制造业参考阈值用于风险提示，不代表外部实时均值。资产负债率低于参考阈值65.00%，资本结构相对稳健。</details>
+</article><article class="card" title="流动比率：1.92倍">
+  <div class="label">流动比率</div>
+  <div class="value">1.92倍</div>
+  <div class="sub">同比 10.85%<br>较上期 -</div>
+  <span class="risk-pill risk-yellow">黄色关注</span>
+  <details><summary>展开参考阈值对比</summary>制造业参考阈值用于风险提示，不代表外部实时均值。流动比率高于经验安全线1.50，短期偿债安全边际较好。</details>
+</article></section>
+  <section class="summary-grid"><article class="summary-card">
+  <strong>规模与现金</strong>
+  <p>营业收入同比18.22%，经营现金流覆盖利润，现金质量相对稳健。</p>
+  <div class="sub">图表证据：收入与毛利率趋势 / 利润现金流对比</div>
+</article><article class="summary-card">
+  <strong>盈利质量</strong>
+  <p>毛利率36.56%；毛利率处于较好区间，建议继续跟踪成本传导能力。</p>
+  <div class="sub">图表证据：ROE仪表盘 / 毛利率仪表盘</div>
+</article><article class="summary-card">
+  <strong>偿债安全</strong>
+  <p>流动比率高于经验安全线，短期偿债边际较好。</p>
+  <div class="sub">图表证据：风险矩阵 / 资产负债结构</div>
+</article></section>
+  <section class="chart-grid"><section class="panel chart-panel"><h2>ROE仪表盘</h2>
+<svg viewBox="0 0 320 235" role="img" aria-label="ROE仪表盘">
+  <path d="M60 145 A100 100 0 0 1 260 145" fill="none" stroke="#E6EEF9" stroke-width="20" stroke-linecap="butt"/>
+  <path d="M60 145 A100 100 0 0 1 260 145" fill="none" stroke="#4672CA" stroke-width="20" stroke-linecap="butt" stroke-dasharray="161.7 314"/>
+  <line x1="68.0" y1="145.0" x2="52.0" y2="145.0" stroke="#667085" stroke-width="1.5"/><text x="36.0" y="157.0" text-anchor="middle" font-size="10" font-weight="800" fill="#667085">0.00%</text><line x1="94.9" y1="79.9" x2="83.6" y2="68.6" stroke="#667085" stroke-width="1.5"/><text x="72.3" y="57.3" text-anchor="middle" font-size="10" font-weight="800" fill="#667085">10.00%</text><line x1="160.0" y1="53.0" x2="160.0" y2="37.0" stroke="#667085" stroke-width="1.5"/><text x="160.0" y="21.0" text-anchor="middle" font-size="10" font-weight="800" fill="#667085">20.00%</text><line x1="252.0" y1="145.0" x2="268.0" y2="145.0" stroke="#667085" stroke-width="1.5"/><text x="284.0" y="157.0" text-anchor="middle" font-size="10" font-weight="800" fill="#667085">40.00%</text>
+  <line x1="160" y1="145" x2="164.4" y2="53.1" stroke="#14213D" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="160" cy="145" r="7" fill="#14213D"/>
+  <text x="160" y="118" text-anchor="middle" font-size="16" font-weight="900" fill="#14213D">20.60%</text>
+  <text x="160" y="174" text-anchor="middle" font-size="12" fill="#667085">
+    <tspan x="160" dy="0">仪表盘仅展示本公司表现</tspan>
+    <tspan x="160" dy="16">与风险区间</tspan>
+  </text>
+  <text x="160" y="212" text-anchor="middle" font-size="10" fill="#667085">满刻度=40%，用于观察ROE相对表现</text>
+</svg></section><section class="panel chart-panel"><h2>毛利率仪表盘</h2>
+<svg viewBox="0 0 320 235" role="img" aria-label="毛利率仪表盘">
+  <path d="M60 145 A100 100 0 0 1 260 145" fill="none" stroke="#E6EEF9" stroke-width="20" stroke-linecap="butt"/>
+  <path d="M60 145 A100 100 0 0 1 260 145" fill="none" stroke="#4672CA" stroke-width="20" stroke-linecap="butt" stroke-dasharray="191.3 314"/>
+  <line x1="68.0" y1="145.0" x2="52.0" y2="145.0" stroke="#667085" stroke-width="1.5"/><text x="36.0" y="157.0" text-anchor="middle" font-size="10" font-weight="800" fill="#667085">0.00%</text><line x1="114.0" y1="65.3" x2="106.0" y2="51.5" stroke="#667085" stroke-width="1.5"/><text x="98.0" y="37.6" text-anchor="middle" font-size="10" font-weight="800" fill="#667085">20.00%</text><line x1="206.0" y1="65.3" x2="214.0" y2="51.5" stroke="#667085" stroke-width="1.5"/><text x="222.0" y="37.6" text-anchor="middle" font-size="10" font-weight="800" fill="#667085">40.00%</text><line x1="252.0" y1="145.0" x2="268.0" y2="145.0" stroke="#667085" stroke-width="1.5"/><text x="284.0" y="157.0" text-anchor="middle" font-size="10" font-weight="800" fill="#667085">60.00%</text>
+  <line x1="160" y1="145" x2="191.0" y2="58.4" stroke="#14213D" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="160" cy="145" r="7" fill="#14213D"/>
+  <text x="160" y="118" text-anchor="middle" font-size="16" font-weight="900" fill="#14213D">36.56%</text>
+  <text x="160" y="174" text-anchor="middle" font-size="12" fill="#667085">
+    <tspan x="160" dy="0">仪表盘仅展示本公司表现</tspan>
+    <tspan x="160" dy="16">与风险区间</tspan>
+  </text>
+  <text x="160" y="212" text-anchor="middle" font-size="10" fill="#667085">满刻度=60%，用于观察毛利率相对表现</text>
+</svg></section><section class="panel chart-panel"><h2>收入与毛利率趋势</h2><svg viewBox="0 0 500 310" role="img" aria-label="收入与毛利率趋势"><rect x="90.0" y="137.2" width="34" height="94.8" fill="#4672CA"><title>2023 营业收入 9,800.00万元</title></rect><text x="107.0" y="97.5" text-anchor="middle" font-size="11" font-weight="900" fill="#FF9F2E">33.16%</text><text x="107.0" y="258" text-anchor="middle" font-size="12" fill="#667085">2023</text><rect x="220.0" y="117.8" width="34" height="114.2" fill="#4672CA"><title>2024 营业收入 1.18亿元</title></rect><text x="237.0" y="88.6" text-anchor="middle" font-size="11" font-weight="900" fill="#FF9F2E">35.59%</text><text x="237.0" y="258" text-anchor="middle" font-size="12" fill="#667085">2024</text><rect x="350.0" y="97.0" width="34" height="135.0" fill="#4672CA"><title>2025 营业收入 1.40亿元</title></rect><text x="367.0" y="85.0" text-anchor="middle" font-size="11" font-weight="900" fill="#FF9F2E">36.56%</text><text x="367.0" y="258" text-anchor="middle" font-size="12" fill="#667085">2025</text><polyline points="107.0,109.5 237.0,100.6 367.0,97.0" fill="none" stroke="#FF9F2E" stroke-width="3"/><circle cx="107.0" cy="109.5" r="5" fill="#FF9F2E"><title>2023 毛利率 33.16%</title></circle><circle cx="237.0" cy="100.6" r="5" fill="#FF9F2E"><title>2024 毛利率 35.59%</title></circle><circle cx="367.0" cy="97.0" r="5" fill="#FF9F2E"><title>2025 毛利率 36.56%</title></circle><line x1="48" y1="232" x2="438" y2="232" stroke="#DDE8F7"/><text x="52" y="292" class="chart-note"><tspan fill="#4672CA">●</tspan> 营业收入  <tspan fill="#FF9F2E">●</tspan> 毛利率</text></svg></section><section class="panel chart-panel"><h2>利润现金流对比</h2><svg viewBox="0 0 500 310" role="img" aria-label="利润现金流对比"><rect x="72" y="163.7" width="32" height="64.3" fill="#FFC000"><title>2023 净利润 960.00万元</title></rect><text x="88" y="155.7" text-anchor="middle" font-size="10" font-weight="900" fill="#14213D">960.00万元</text><rect x="114" y="149.0" width="32" height="79.0" fill="#4672CA"><title>2023 经营现金流 1,180.00万元</title></rect><text x="130" y="141.0" text-anchor="middle" font-size="10" font-weight="900" fill="#14213D">1,180.00万元</text><text x="107" y="258" text-anchor="middle" font-size="12" fill="#667085">2023</text><rect x="202" y="130.9" width="32" height="97.1" fill="#FFC000"><title>2024 净利润 1,450.00万元</title></rect><text x="218" y="122.9" text-anchor="middle" font-size="10" font-weight="900" fill="#14213D">1,450.00万元</text><rect x="244" y="112.8" width="32" height="115.2" fill="#4672CA"><title>2024 经营现金流 1,720.00万元</title></rect><text x="260" y="104.8" text-anchor="middle" font-size="10" font-weight="900" fill="#14213D">1,720.00万元</text><text x="237" y="258" text-anchor="middle" font-size="12" fill="#667085">2024</text><rect x="332" y="102.1" width="32" height="125.9" fill="#FFC000"><title>2025 净利润 1,880.00万元</title></rect><text x="348" y="94.1" text-anchor="middle" font-size="10" font-weight="900" fill="#14213D">1,880.00万元</text><rect x="374" y="78.0" width="32" height="150.0" fill="#4672CA"><title>2025 经营现金流 2,240.00万元</title></rect><text x="390" y="70.0" text-anchor="middle" font-size="10" font-weight="900" fill="#14213D">2,240.00万元</text><text x="367" y="258" text-anchor="middle" font-size="12" fill="#667085">2025</text><line x1="48" y1="228" x2="448" y2="228" stroke="#DDE8F7"/><text x="52" y="292" class="chart-note"><tspan fill="#FFC000">●</tspan> 净利润  <tspan fill="#4672CA">●</tspan> 经营现金流</text></svg></section><section class="panel chart-panel"><h2>费用结构</h2><svg viewBox="0 0 520 300" role="img" aria-label="费用结构"><circle cx="152" cy="140" r="54" fill="none" stroke="#E6EEF9" stroke-width="30"/><circle cx="152" cy="140" r="54" fill="none" stroke="#4672CA" stroke-width="30" stroke-dasharray="108.49 230.80" stroke-dashoffset="-0.00" transform="rotate(-90 152 140)"><title>销售费用 1,020.00万元 / 31.97%</title></circle><circle cx="152" cy="140" r="54" fill="none" stroke="#ED7D31" stroke-width="30" stroke-dasharray="117.00 222.29" stroke-dashoffset="-108.49" transform="rotate(-90 152 140)"><title>管理费用 1,100.00万元 / 34.48%</title></circle><circle cx="152" cy="140" r="54" fill="none" stroke="#FFC000" stroke-width="30" stroke-dasharray="97.85 241.44" stroke-dashoffset="-225.49" transform="rotate(-90 152 140)"><title>研发费用 920.00万元 / 28.84%</title></circle><circle cx="152" cy="140" r="54" fill="none" stroke="#70AD47" stroke-width="30" stroke-dasharray="15.95 323.34" stroke-dashoffset="-323.34" transform="rotate(-90 152 140)"><title>财务费用 150.00万元 / 4.70%</title></circle><circle cx="152" cy="140" r="34" fill="#fff"/><text x="152" y="136" text-anchor="middle" font-size="13" font-weight="900" fill="#062B5F">费用结构环图</text><text x="152" y="156" text-anchor="middle" font-size="12" font-weight="900" fill="#667085">合计 3,190.00万元</text><circle cx="292" cy="69" r="5" fill="#4672CA"/><text x="308" y="74" font-size="13" fill="#14213D" font-weight="900">销售费用</text><text x="308" y="92" font-size="12" fill="#667085" font-weight="800">1,020.00万元 / 31.97%</text><circle cx="292" cy="111" r="5" fill="#ED7D31"/><text x="308" y="116" font-size="13" fill="#14213D" font-weight="900">管理费用</text><text x="308" y="134" font-size="12" fill="#667085" font-weight="800">1,100.00万元 / 34.48%</text><circle cx="292" cy="153" r="5" fill="#FFC000"/><text x="308" y="158" font-size="13" fill="#14213D" font-weight="900">研发费用</text><text x="308" y="176" font-size="12" fill="#667085" font-weight="800">920.00万元 / 28.84%</text><circle cx="292" cy="195" r="5" fill="#70AD47"/><text x="308" y="200" font-size="13" fill="#14213D" font-weight="900">财务费用</text><text x="308" y="218" font-size="12" fill="#667085" font-weight="800">150.00万元 / 4.70%</text><text x="42" y="272" class="chart-note">费用结构环图，金额与占比均基于上传报表测算</text></svg></section><section class="panel chart-panel"><h2>资产负债结构</h2><svg viewBox="0 0 520 300" role="img" aria-label="资产负债结构"><circle cx="152" cy="140" r="54" fill="none" stroke="#E6EEF9" stroke-width="30"/><circle cx="152" cy="140" r="54" fill="none" stroke="#ED7D31" stroke-width="30" stroke-dasharray="136.32 202.97" stroke-dashoffset="-0.00" transform="rotate(-90 152 140)"><title>负债合计 6,750.00万元 / 40.18%</title></circle><circle cx="152" cy="140" r="54" fill="none" stroke="#4672CA" stroke-width="30" stroke-dasharray="202.97 136.32" stroke-dashoffset="-136.32" transform="rotate(-90 152 140)"><title>所有者权益 1.00亿元 / 59.82%</title></circle><circle cx="152" cy="140" r="34" fill="#fff"/><text x="152" y="136" text-anchor="middle" font-size="13" font-weight="900" fill="#062B5F">资产负债结构环图</text><text x="152" y="156" text-anchor="middle" font-size="12" font-weight="900" fill="#667085">合计 1.68亿元</text><circle cx="292" cy="69" r="5" fill="#ED7D31"/><text x="308" y="74" font-size="13" fill="#14213D" font-weight="900">负债合计</text><text x="308" y="92" font-size="12" fill="#667085" font-weight="800">6,750.00万元 / 40.18%</text><circle cx="292" cy="111" r="5" fill="#4672CA"/><text x="308" y="116" font-size="13" fill="#14213D" font-weight="900">所有者权益</text><text x="308" y="134" font-size="12" fill="#667085" font-weight="800">1.00亿元 / 59.82%</text><text x="42" y="272" class="chart-note">资产负债结构环图，展示负债与权益的资本来源结构；流动/非流动资产见明细表</text></svg></section><section class="panel chart-panel"><h2>能力健康度评分</h2>
+<svg viewBox="0 0 360 430" width="200" height="190" role="img" aria-label="能力健康度评分">
+  <polygon points="180,70 270,136 236,242 124,242 90,136" fill="none" stroke="#E6EEF9" stroke-width="2"/>
+  <line x1="180" y1="165" x2="180.0" y2="70.0" stroke="#DDE8F7"/><text x="180.0" y="70.0" text-anchor="middle" font-size="12" font-weight="800" fill="#667085">偿债</text><line x1="180" y1="165" x2="270.4" y2="135.6" stroke="#DDE8F7"/><text x="270.4" y="135.6" text-anchor="middle" font-size="12" font-weight="800" fill="#667085">营运</text><line x1="180" y1="165" x2="235.8" y2="241.9" stroke="#DDE8F7"/><text x="235.8" y="241.9" text-anchor="middle" font-size="12" font-weight="800" fill="#667085">盈利</text><line x1="180" y1="165" x2="124.2" y2="241.9" stroke="#DDE8F7"/><text x="124.2" y="241.9" text-anchor="middle" font-size="12" font-weight="800" fill="#667085">发展</text><line x1="180" y1="165" x2="89.6" y2="135.6" stroke="#DDE8F7"/><text x="89.6" y="135.6" text-anchor="middle" font-size="12" font-weight="800" fill="#667085">杜邦</text>
+  <text x="180.0" y="61.0" text-anchor="middle" font-size="11" font-weight="900" fill="#1769F5">98分</text><text x="293.2" y="143.2" text-anchor="middle" font-size="11" font-weight="900" fill="#1769F5">90分</text><text x="249.9" y="276.3" text-anchor="middle" font-size="11" font-weight="900" fill="#1769F5">100分</text><text x="110.1" y="276.3" text-anchor="middle" font-size="11" font-weight="900" fill="#1769F5">100分</text><text x="66.8" y="143.2" text-anchor="middle" font-size="11" font-weight="900" fill="#1769F5">100分</text>
+  <polygon points="180.0,71.7 261.4,138.6 235.8,241.9 124.2,241.9 89.6,135.6" fill="rgba(23,105,245,.18)" stroke="#1769F5" stroke-width="3"/>
+  <text x="180" y="294" text-anchor="middle" font-size="14" fill="#667085">
+    <tspan x="180" dy="10">健康度基于本公司指标与参考阈值测算不代表行业均值</tspan>
+  </text>
+  <text x="10" y="334" font-size="13" fill="#667085">
+    <tspan x="10" dy="0">评分说明：80分以上=相对稳健；</tspan>
+    <tspan x="10" dy="16">60-80分=持续观察；60分以下=改善压力较大。</tspan>
+  </text>
+  <text x="10" y="382" font-size="13" fill="#667085">
+    <tspan x="10" dy="0">偿债/营运/盈利/发展/杜邦</tspan>
+    <tspan x="10" dy="20">分别由对应指标加权归一化为0-100分。</tspan>
+  </text>
+</svg></section><section class="panel chart-panel"><h2>杜邦金字塔</h2>
+<svg viewBox="0 0 520 450" role="img" aria-label="杜邦金字塔">
+  <polygon points="260,52 95,220 425,220" fill="#F3F8FF" stroke="#DDE8F7" stroke-width="2"/>
+  <rect x="190" y="68" width="140" height="54" rx="10" fill="#4672CA"/><text x="260" y="101" text-anchor="middle" fill="#fff" font-size="16" font-weight="900">ROE 20.02%</text>
+  <rect x="48" y="178" width="128" height="76" rx="10" fill="#ED7D31"/><text x="112.0" y="205" text-anchor="middle" fill="#fff" font-size="13" font-weight="900">净利率 13.48%</text><text x="112.0" y="226" text-anchor="middle" fill="#fff" font-size="11" font-weight="900">净利率评分 100分</text><text x="112.0" y="244" text-anchor="middle" fill="#fff" font-size="10" font-weight="800">卖得贵 · 较满意</text><rect x="194" y="178" width="132" height="76" rx="10" fill="#FFC000"/><text x="260.0" y="205" text-anchor="middle" fill="#fff" font-size="13" font-weight="900">周转率 0.89次</text><text x="260.0" y="226" text-anchor="middle" fill="#fff" font-size="11" font-weight="900">周转率评分 89分</text><text x="260.0" y="244" text-anchor="middle" fill="#fff" font-size="10" font-weight="800">卖得快 · 较满意</text><rect x="354" y="178" width="128" height="76" rx="10" fill="#70AD47"/><text x="418.0" y="205" text-anchor="middle" fill="#fff" font-size="13" font-weight="900">权益乘数 1.67倍</text><text x="418.0" y="226" text-anchor="middle" fill="#fff" font-size="11" font-weight="900">权益乘数评分 100分</text><text x="418.0" y="244" text-anchor="middle" fill="#fff" font-size="10" font-weight="800">敢借钱 · 较满意</text>
+  <text x="260" y="286" text-anchor="middle" font-size="16" font-weight="800" fill="#667085">ROE = 净利率 × 总资产周转率 × 权益乘数，贡献为测算口径</text>
+  <text x="260" y="322" text-anchor="middle" font-size="13" fill="#667085">
+    <tspan x="260" dy="0">赚钱靠什么？要么卖得贵，要么卖得快，要么敢借钱。</tspan>
+    <tspan x="260" dy="20">本期ROE主要由净利率支撑，三项因子整体较满意。</tspan>
+  </text>
+  <text x="40" y="376" text-anchor="start" font-size="15" fill="#667085">
+    <tspan x="40" dy="0">评分说明：80分以上=较满意；60-80分=需观察；60分以下=需改善。</tspan>
+    <tspan x="40" dy="30">三因子评分基于系统参考阈值测算，不代表行业均值。</tspan>
+  </text>
+</svg></section><section class="panel chart-panel"><h2>风险矩阵</h2>
+<svg viewBox="0 0 510 240" role="img" aria-label="风险矩阵">
+  <rect x="30" y="62" width="130" height="54" rx="12" fill="#F7B731"/><text x="95" y="94" text-anchor="middle" fill="#fff" font-size="13" font-weight="900">流动比率</text><rect x="180" y="62" width="130" height="54" rx="12" fill="#70AD47"/><text x="245" y="94" text-anchor="middle" fill="#fff" font-size="13" font-weight="900">资产负债率</text><rect x="330" y="62" width="130" height="54" rx="12" fill="#70AD47"/><text x="395" y="94" text-anchor="middle" fill="#fff" font-size="13" font-weight="900">现金短债比</text><rect x="30" y="144" width="130" height="54" rx="12" fill="#70AD47"/><text x="95" y="176" text-anchor="middle" fill="#fff" font-size="13" font-weight="900">存货周转率</text><rect x="180" y="144" width="130" height="54" rx="12" fill="#F7B731"/><text x="245" y="176" text-anchor="middle" fill="#fff" font-size="13" font-weight="900">期间费用率</text><rect x="330" y="144" width="130" height="54" rx="12" fill="#70AD47"/><text x="395" y="176" text-anchor="middle" fill="#fff" font-size="13" font-weight="900">经营现金流增长</text>
+  <text x="255" y="220" text-anchor="middle" class="chart-note">红色预警 / 黄色关注 / 绿色稳健</text>
+</svg></section><section class="panel chart-panel"><h2>盈利质量/现金含金量</h2>
+<svg viewBox="0 0 510 260" role="img" aria-label="盈利质量/现金含金量">
+  <line x1="62" y1="172" x2="442" y2="172" stroke="#DDE8F7"/>
+  <line x1="62" y1="64.6" x2="442" y2="64.6" stroke="#70AD47" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <text x="450" y="68.6" font-size="10" fill="#70AD47" font-weight="900">1.00</text>
+  <line x1="62" y1="86.1" x2="442" y2="86.1" stroke="#FFC000" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <text x="450" y="90.1" font-size="10" fill="#FFC000" font-weight="900">0.80</text>
+  <rect x="96.0" y="40.0" width="36" height="132.0" fill="#70AD47"><title>2023 净现比 1.23倍 · 稳健</title></rect><text x="114.0" y="32.0" text-anchor="middle" font-size="11" font-weight="900" fill="#14213D">1.23倍</text><text x="114.0" y="204" text-anchor="middle" font-size="12" fill="#667085">2023</text><rect x="222.7" y="44.6" width="36" height="127.4" fill="#70AD47"><title>2024 净现比 1.19倍 · 稳健</title></rect><text x="240.7" y="36.6" text-anchor="middle" font-size="11" font-weight="900" fill="#14213D">1.19倍</text><text x="240.7" y="204" text-anchor="middle" font-size="12" fill="#667085">2024</text><rect x="349.3" y="44.0" width="36" height="128.0" fill="#70AD47"><title>2025 净现比 1.19倍 · 稳健</title></rect><text x="367.3" y="36.0" text-anchor="middle" font-size="11" font-weight="900" fill="#14213D">1.19倍</text><text x="367.3" y="204" text-anchor="middle" font-size="12" fill="#667085">2025</text>
+  <text x="42" y="230" class="chart-note">净现比=经营现金流/净利润；>=1.00 稳健，0.80-1.00 关注，&lt;0.80 预警</text>
+</svg></section></section>
+  <section class="panel"><h2>期间费用结构明细</h2><table><thead><tr><th>项目</th><th>金额/值</th><th>占比/同比</th><th>同比</th><th>解读</th></tr></thead><tbody><tr><td>销售费用</td><td>1,020.00万元</td><td>31.97%</td><td>20.00%</td><td>关注费用投放与收入增长匹配度，避免费用刚性侵蚀利润。</td></tr><tr><td>管理费用</td><td>1,100.00万元</td><td>34.48%</td><td>12.24%</td><td>关注费用投放与收入增长匹配度，避免费用刚性侵蚀利润。</td></tr><tr><td>研发费用</td><td>920.00万元</td><td>28.84%</td><td>21.05%</td><td>关注费用投放与收入增长匹配度，避免费用刚性侵蚀利润。</td></tr><tr><td>财务费用</td><td>150.00万元</td><td>4.70%</td><td>-6.25%</td><td>关注费用投放与收入增长匹配度，避免费用刚性侵蚀利润。</td></tr></tbody></table></section>
+  <section class="panel"><h2>资产负债结构明细</h2><table><thead><tr><th>项目</th><th>金额/值</th><th>占比/同比</th><th>同比</th><th>解读</th></tr></thead><tbody><tr><td>资产总计</td><td>1.68亿元</td><td>100.00%</td><td>-</td><td>资产规模是周转效率和资本回报的基础。</td></tr><tr><td>负债合计</td><td>6,750.00万元</td><td>40.18%</td><td>-</td><td>负债占比反映财务杠杆和偿债压力。</td></tr><tr><td>所有者权益</td><td>1.00亿元</td><td>59.82%</td><td>-</td><td>权益占比体现资本安全垫。</td></tr><tr><td>流动资产</td><td>8,350.00万元</td><td>49.70%</td><td>-</td><td>流动资产占比影响短期偿债和运营弹性。</td></tr><tr><td>非流动资产</td><td>8,450.00万元</td><td>50.30%</td><td>-</td><td>非流动资产占比反映长期资产投入强度。</td></tr><tr><td>短期债务</td><td>860.00万元</td><td>100.00%</td><td>-</td><td>短债占比越高，对现金流和续贷能力要求越高。</td></tr><tr><td>长期债务</td><td>0.00万元</td><td>0.00%</td><td>-</td><td>长债占比提升可缓释短期流动性压力。</td></tr></tbody></table></section>
+  <section class="panel"><h2>五大能力分析明细</h2><h3>偿债能力</h3><table><thead><tr><th>指标</th><th>本期值</th><th>同比</th><th>公式</th><th>解读</th></tr></thead><tbody><tr><td>流动比率</td><td>1.92倍</td><td>10.85%</td><td>流动资产 / 流动负债</td><td>流动比率高于经验安全线1.50，短期偿债安全边际较好。</td></tr><tr><td>速动比率</td><td>1.26倍</td><td>15.20%</td><td>(流动资产 - 存货) / 流动负债</td><td>较上期上升，指标方向改善。 制造业场景下需结合业务周期、账期和成本传导能力复核。</td></tr><tr><td>资产负债率</td><td>40.18%</td><td>-8.34%</td><td>负债总额 / 资产总额</td><td>资产负债率低于参考阈值65.00%，资本结构相对稳健。</td></tr><tr><td>权益乘数</td><td>1.67倍</td><td>-6.11%</td><td>资产总额 / 所有者权益</td><td>较上期下降，指标方向改善。 制造业场景下需结合业务周期、账期和成本传导能力复核。</td></tr><tr><td>利息保障倍数</td><td>24.33倍</td><td>47.47%</td><td>(营业利润 + 利息费用) / 利息费用</td><td>较上期上升，指标方向改善。 制造业场景下需结合业务周期、账期和成本传导能力复核。</td></tr><tr><td>现金短债比</td><td>2.53倍</td><td>45.95%</td><td>货币资金 /（短期借款 + 一年内到期非流动负债 + 应付票据）</td><td>较上期上升，指标方向改善。 制造业场景下需结合业务周期、账期和成本传导能力复核。</td></tr></tbody></table><h3>营运能力</h3><table><thead><tr><th>指标</th><th>本期值</th><th>同比</th><th>公式</th><th>解读</th></tr></thead><tbody><tr><td>应收账款周转率</td><td>6.27次</td><td>3.61%</td><td>营业收入 / 平均应收账款</td><td>较上期上升，指标方向改善。 制造业场景下需结合业务周期、账期和成本传导能力复核。</td></tr><tr><td>存货周转率</td><td>3.25次</td><td>6.83%</td><td>营业成本 / 平均存货</td><td>存货周转率高于制造业经验阈值；若持续下行，需排查库存积压、项目周期或备货策略变化。</td></tr><tr><td>总资产周转率</td><td>0.89次</td><td>3.16%</td><td>营业收入 / 平均总资产</td><td>较上期上升，指标方向改善。 制造业场景下需结合业务周期、账期和成本传导能力复核。</td></tr><tr><td>应付账款周转率</td><td>5.48次</td><td>6.35%</td><td>营业成本 / 平均应付账款</td><td>较上期上升，需结合账期政策和供应商结算节奏判断。 制造业场景下需结合业务周期、账期和成本传导能力复核。</td></tr></tbody></table><h3>盈利能力</h3><table><thead><tr><th>指标</th><th>本期值</th><th>同比</th><th>公式</th><th>解读</th></tr></thead><tbody><tr><td>毛利率</td><td>36.56%</td><td>2.71%</td><td>毛利 / 营业收入</td><td>较上期上升，指标方向改善。 制造业场景下需结合业务周期、账期和成本传导能力复核。</td></tr><tr><td>净利率</td><td>13.48%</td><td>9.67%</td><td>净利润 / 营业收入</td><td>较上期上升，指标方向改善。 制造业场景下需结合业务周期、账期和成本传导能力复核。</td></tr><tr><td>总资产报酬率 ROA</td><td>11.97%</td><td>13.14%</td><td>净利润 / 平均总资产</td><td>较上期上升，指标方向改善。 制造业场景下需结合业务周期、账期和成本传导能力复核。</td></tr><tr><td>净资产收益率 ROE</td><td>20.60%</td><td>5.86%</td><td>净利润 / 平均所有者权益</td><td>较上期上升，指标方向改善。 制造业场景下需结合业务周期、账期和成本传导能力复核。</td></tr><tr><td>期间费用率</td><td>22.87%</td><td>-1.88%</td><td>(销售费用 + 管理费用 + 研发费用 + 财务费用) / 营业收入</td><td>期间费用率高于制造业经验阈值；需结合销售投放、研发投入和管理效率判断费用产出比。</td></tr><tr><td>扣非净利率</td><td>数据不足</td><td>-</td><td>扣非净利润 / 营业收入</td><td>报表未提供扣非净利润字段，暂不计算；需人工补充口径后复核。</td></tr></tbody></table><h3>发展能力</h3><table><thead><tr><th>指标</th><th>本期值</th><th>同比</th><th>公式</th><th>解读</th></tr></thead><tbody><tr><td>营业收入增长率</td><td>18.22%</td><td>-10.72%</td><td>(本期营业收入 - 上期营业收入) / 上期营业收入</td><td>较上期下降，需要关注潜在压力。 制造业场景下需结合业务周期、账期和成本传导能力复核。</td></tr><tr><td>净利润增长率</td><td>29.66%</td><td>-41.90%</td><td>(本期净利润 - 上期净利润) / 上期净利润</td><td>较上期下降，需要关注潜在压力。 制造业场景下需结合业务周期、账期和成本传导能力复核。</td></tr><tr><td>总资产增长率</td><td>15.07%</td><td>7.15%</td><td>(本期总资产 - 上期总资产) / 上期总资产</td><td>较上期上升，指标方向改善。 制造业场景下需结合业务周期、账期和成本传导能力复核。</td></tr><tr><td>所有者权益增长率</td><td>22.56%</td><td>0.77%</td><td>(本期所有者权益 - 上期所有者权益) / 上期所有者权益</td><td>较上期上升，指标方向改善。 制造业场景下需结合业务周期、账期和成本传导能力复核。</td></tr><tr><td>经营现金流增长率</td><td>30.23%</td><td>-33.94%</td><td>(本期经营现金流 - 上期经营现金流) / 上期经营现金流</td><td>较上期下降，需要关注潜在压力。 制造业场景下需结合业务周期、账期和成本传导能力复核。</td></tr><tr><td>三年复合增长率 CAGR</td><td>19.31%</td><td>-</td><td>（期末值 / 期初值）^(1/年数)-1</td><td>用于判断中期成长质量，需结合行业景气度和战略投入持续性。</td></tr></tbody></table><h3>杜邦分析</h3><table><thead><tr><th>指标</th><th>本期值</th><th>同比</th><th>公式</th><th>解读</th></tr></thead><tbody><tr><td>净利率</td><td>13.48%</td><td>9.67%</td><td>净利润 / 营业收入</td><td>杜邦拆解用于识别ROE改善来源，需区分主业盈利、资产效率和财务杠杆贡献。</td></tr><tr><td>总资产周转率</td><td>0.89次</td><td>3.16%</td><td>营业收入 / 平均总资产</td><td>杜邦拆解用于识别ROE改善来源，需区分主业盈利、资产效率和财务杠杆贡献。</td></tr><tr><td>权益乘数</td><td>1.67倍</td><td>-6.11%</td><td>资产总额 / 所有者权益</td><td>杜邦拆解用于识别ROE改善来源，需区分主业盈利、资产效率和财务杠杆贡献。</td></tr><tr><td>杜邦 ROE</td><td>20.02%</td><td>6.22%</td><td>净利率 × 总资产周转率 × 权益乘数</td><td>杜邦拆解用于识别ROE改善来源，需区分主业盈利、资产效率和财务杠杆贡献。</td></tr></tbody></table></section>
+  <section class="panel"><h2>杜邦分析测算贡献</h2><table><thead><tr><th>项目</th><th>金额/值</th><th>占比/同比</th><th>同比</th><th>解读</th></tr></thead><tbody><tr><td>净利率</td><td>13.48%</td><td>9.67%</td><td>-</td><td>用于判断ROE变化来自盈利、效率还是杠杆因素。</td></tr><tr><td>总资产周转率</td><td>0.89次</td><td>3.16%</td><td>-</td><td>用于判断ROE变化来自盈利、效率还是杠杆因素。</td></tr><tr><td>权益乘数</td><td>1.67倍</td><td>-6.11%</td><td>-</td><td>用于判断ROE变化来自盈利、效率还是杠杆因素。</td></tr><tr><td>ROE</td><td>20.02%</td><td>6.22%</td><td>-</td><td>用于判断ROE变化来自盈利、效率还是杠杆因素。</td></tr></tbody></table></section>
+  <section class="panel">
+    <h2>分析依据与基准说明</h2>
+    <p class="basis">分析依据：《财务成本管理》+ 行业通用分析框架</p>
+    <p class="basis">参考阈值为系统内置通用风险线，并非外部实时行业均值；仅用于风险提示和管理层快速筛查。</p>
+    <p class="basis warning">本报告为自动化分析，仅供决策参考，不构成投资建议，需结合业务背景人工校验。</p>
+  </section>
+</main>
+</body>
+</html>
